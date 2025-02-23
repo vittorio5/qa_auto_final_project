@@ -5,8 +5,6 @@ import time
 
 class ProductPage(BasePage):
     def can_add_product_to_basket(self):
-        # prod_name = self.browser.find_element(*ProductPageLocators.PRODUCT_NAME).text
-        # prod_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE).text
         prod_name = self.get_product_name()
         prod_price = self.get_product_price()        
         self.browser.find_element(*ProductPageLocators.ADDTOBASKET_BTN).click()
@@ -37,4 +35,3 @@ class ProductPage(BasePage):
     
     def should_disappear(self):
         assert self.is_disappeared(*ProductPageLocators.INBASKET_MESSAGE), "Message is still presented, but should disappear"
-    

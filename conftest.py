@@ -2,6 +2,8 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as chromeOption
 from selenium.webdriver.firefox.options import Options as firefoxOption
+from .pages.login_page import LoginPage
+import time
 
 
 def pytest_addoption(parser):
